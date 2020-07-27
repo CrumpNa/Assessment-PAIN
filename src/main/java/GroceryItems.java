@@ -16,7 +16,9 @@ public class GroceryItems {
 
     //fields
     private String name;
+    private int nameCounter=0; //counts the number of times a certain name is "seen"
     private int price;
+    private int priceCounter=0; //counts the number of times a certain price is seen
     private String type;
     private Date expiration;
     //hashmap
@@ -49,7 +51,12 @@ public class GroceryItems {
     }
 
 
-    public void regexChecker(){
-        boolean b = Pattern.matches("n", );
+    public void regexChecker() throws FileNotFoundException {
+        String currLine=inFile(); //call input method to bring in current line
+        boolean n1 = Pattern.matches("n", currLine); //if matches n in name
+        boolean n2= Pattern.matches("N", currLine); //if matches N in name
+        if(n1 || n2==true){
+            //put into name field in hashmap
+        }
     }
 }

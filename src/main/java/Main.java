@@ -5,7 +5,7 @@ public class Main {
 
     public String readRawDataToString() throws Exception{
         ClassLoader classLoader = getClass().getClassLoader();
-        String result = IOUtils.toString(classLoader.getResourceAsStream("RawData.txt"));
+        String result = IOUtils.toString(classLoader.getResourceAsStream("RawData.txt"));//changes raw text to string
         return result;
     }
 
